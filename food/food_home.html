@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Data Table-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Happy+Monkey&family=Inter:wght@300&family=Italiana&family=Jost:wght@300&family=Kaisei+Decol&family=Montserrat:ital,wght@0,300;1,400&family=Open+Sans:wght@300;400&family=Scope+One&family=Slabo+27px&family=Space+Grotesk&family=Squada+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./Assets/css/foodordering.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="header-section col-12">
+            <div class="header-nav">
+                <div class="header-nav-brand">
+                    <span>WHAT2EAT</span>
+                </div>
+                <div class="header-nav-navbar">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Menu</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                </div>
+                <div class="header-nav-finding">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path
+                            d="M21 21L16.514 16.506L21 21ZM19 10.5C19 12.7543 18.1045 14.9163 16.5104 16.5104C14.9163 18.1045 12.7543 19 10.5 19C8.24566 19 6.08365 18.1045 4.48959 16.5104C2.89553 14.9163 2 12.7543 2 10.5C2 8.24566 2.89553 6.08365 4.48959 4.48959C6.08365 2.89553 8.24566 2 10.5 2C12.7543 2 14.9163 2.89553 16.5104 4.48959C18.1045 6.08365 19 8.24566 19 10.5V10.5Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <button class="btn btn-gioHang">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24" fill="none">
+                            <path
+                                d="M2.97689 9.84C3.01712 9.33881 3.24464 8.87115 3.61417 8.53017C3.98369 8.18918 4.46808 7.9999 4.97089 8H17.0289C17.5317 7.9999 18.0161 8.18918 18.3856 8.53017C18.7551 8.87115 18.9827 9.33881 19.0229 9.84L19.8259 19.84C19.848 20.1152 19.8129 20.392 19.7227 20.6529C19.6326 20.9139 19.4894 21.1533 19.3022 21.3562C19.115 21.5592 18.8878 21.7211 18.6349 21.8319C18.382 21.9427 18.109 21.9999 17.8329 22H4.16689C3.89081 21.9999 3.61774 21.9427 3.36487 21.8319C3.112 21.7211 2.8848 21.5592 2.69759 21.3562C2.51037 21.1533 2.36719 20.9139 2.27706 20.6529C2.18693 20.392 2.1518 20.1152 2.17389 19.84L2.97689 9.84V9.84Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.9999 11V6C14.9999 4.93913 14.5785 3.92172 13.8283 3.17157C13.0782 2.42143 12.0607 2 10.9999 2C9.93901 2 8.9216 2.42143 8.17145 3.17157C7.42131 3.92172 6.99988 4.93913 6.99988 6V11"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-content">
+                <div class="authetic-home ">
+                    <div class="authentic-home-text">
+                        <p id="authetic-home-header" class="" style="color: brown;">Authentic Home food in UK</p>
+                        <p id="authentic-home-description">
+                            What2Eat is a courier service in which authentic home cook food is delivered to a customer.
+                        </p>
+                    </div>
+                    <div id="authentic-home-search" class="form-group">
+                        <input type="text" placeholder=" Search your favourite food" class="form-control">
+                        <button class="btn btn-warning">
+                            <span>Search</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cooking-man ">
+                    <div class="background-complete">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kitchen-section col-12">
+            <div class="row">
+                <div class="kitchen-header col-10">
+                    <h1 id="h2-kitchen">Home Kitchen</h1>
+                    <ul class="kitchen-header-nav">
+                        <li class="kitchen-header-nav-li">
+                            <a class="btn btn-warning btn-all">All</a>
+                            <a class="btn btn-outline-warning btn-header-home-kitchen">Button</a>
+                            <a class="btn btn-outline-warning btn-header-home-kitchen">Free delivery</a>
+                            <a class="btn btn-outline-warning btn-header-home-kitchen">New</a>
+                            <a class="btn btn-outline-warning btn-header-home-kitchen">Comming</a>
+                        </li>
+                    </ul>
+                    <select name="" id="select-menu" class="form-control kitchen-filter" style="width: 50%;">
+                        <option value="">Filters
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10"
+                                fill="none">
+                                <path d="M7 10L0 2.49956L2.33443 0L7 5.00088L11.6656 0L14 2.49956L7 10Z"
+                                    fill="#929292" />
+                            </svg>
+                        </option>
+                    </select>
+                </div>
+
+                <div class="kitchen-menu-list col-12">
+                    <div class="menu-list-item" id="one-four-item">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-section col-12">
+            <h2 id="blog-section-h2">Our Blog</h2>
+            <div class="blog-content media" id="blog-show">
+                <div class="blog-content-one-two" style="width: 27%;" id="blog-content-id-one-two">
+
+                </div>
+
+                <div class="blog-content-center" style="max-width: 46%;" id="blog-content-id-center">
+
+                </div>
+
+                <div class="blog-content-four-five" style="width: 27%;" id="blog-content-id-four-five">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-us-section row col-12">
+            <div class="contact-right ">
+                <form action="">
+                    <div class="contact-us-title">
+                        <h2 id="contact-us-h2 col-6">Do you have a question
+                            or want to become a seller?</h2>
+                        <span id="contact-us-span">Fill this form and our manager will contact you next 48 hours.</span>
+                    </div>
+                    <div class="contact-to-contact form-group">
+                        <div class="contact-name-email row">
+                            <input type="text" id="input-name" class="form-control col-6" placeholder="Your Name">
+                            <input type="text" id="input-email" class="form-control col-5" placeholder="Your Email">
+                        </div>
+                        <textarea name="" id="input-message" placeholder="Your Message"
+                            class="form-control col-12"></textarea>
+                    </div>
+                    <button class="btn btn-warning btn-send-question">Send Question</button>
+                </form>
+            </div>
+            <div class="contact-left ">
+                <div class="contact-delivery">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section row col-12">
+            <div class="header-nav-footer">
+                <div class="header-nav-brand">
+                    <span style="margin-right: 200px;">WHAT2EAT</span>
+                </div>
+                <div class="header-nav-navbar" style="margin-right: 200px;">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Menu</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                </div>
+                <div class="header-nav-finding">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path
+                            d="M21 21L16.514 16.506L21 21ZM19 10.5C19 12.7543 18.1045 14.9163 16.5104 16.5104C14.9163 18.1045 12.7543 19 10.5 19C8.24566 19 6.08365 18.1045 4.48959 16.5104C2.89553 14.9163 2 12.7543 2 10.5C2 8.24566 2.89553 6.08365 4.48959 4.48959C6.08365 2.89553 8.24566 2 10.5 2C12.7543 2 14.9163 2.89553 16.5104 4.48959C18.1045 6.08365 19 8.24566 19 10.5V10.5Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24" fill="none">
+                        <path
+                            d="M2.97689 9.84C3.01712 9.33881 3.24464 8.87115 3.61417 8.53017C3.98369 8.18918 4.46808 7.9999 4.97089 8H17.0289C17.5317 7.9999 18.0161 8.18918 18.3856 8.53017C18.7551 8.87115 18.9827 9.33881 19.0229 9.84L19.8259 19.84C19.848 20.1152 19.8129 20.392 19.7227 20.6529C19.6326 20.9139 19.4894 21.1533 19.3022 21.3562C19.115 21.5592 18.8878 21.7211 18.6349 21.8319C18.382 21.9427 18.109 21.9999 17.8329 22H4.16689C3.89081 21.9999 3.61774 21.9427 3.36487 21.8319C3.112 21.7211 2.8848 21.5592 2.69759 21.3562C2.51037 21.1533 2.36719 20.9139 2.27706 20.6529C2.18693 20.392 2.1518 20.1152 2.17389 19.84L2.97689 9.84V9.84Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M14.9999 11V6C14.9999 4.93913 14.5785 3.92172 13.8283 3.17157C13.0782 2.42143 12.0607 2 10.9999 2C9.93901 2 8.9216 2.42143 8.17145 3.17157C7.42131 3.92172 6.99988 4.93913 6.99988 6V11"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="white-line">
+
+            </div>
+            <span id="copy">Copyright @2021 What2Eat</span>
+        </div>
+    </div>
+</body>
+<script>
+    "use strict";
+    //REGION 1
+    const gREQUEST_STATUS_OK = 200;
+    const gREQUEST_CREATE_OK = 201; // status 201 là tạo mới thành công
+    const gREQUEST_READY_STATUS_FINISH_AND_OK = 4;
+    const gBASE_URL = "https://64747ed27de100807b1b0fa4.mockapi.io/api/v1/pizza";
+    const gBASE_URL_BLOG = "https://64747ed27de100807b1b0fa4.mockapi.io/api/v1/blogs"
+    var vBASE_URL_FOODS = "https://food-ordering-fvo9.onrender.com/api/foods/";
+
+    var vPizzaId = 0;
+    var vPizzaObject = {};
+
+    //REGION 2
+
+    $(document).ready(function () {
+        onPageLoading();
+    })
+
+
+    //REGION 3
+
+
+    function onPageLoading() {
+        loadPizzaDataToDiv();
+        loadBlogDataToDiv();
+        checkCartAndChangeColor();
+    }
+
+
+    function onBtnAddToCart(paramId) {
+        vPizzaId = getPizzaIdFromButton(paramId);
+
+        getPizzaById(vPizzaId);
+    }
+
+    //REGION 4
+
+
+    function loadPizzaDataToDiv() {
+        $.ajax({
+            url: gBASE_URL,
+            type: "GET",
+            success: getApiSuccess,
+            error: getApiFailed,
+        });
+    }
+
+
+    function getApiSuccess(paramResponse) {
+
+        showDataToDiv(paramResponse);
+    }
+    function getApiFailed(paramError) {
+        console.log(paramError);
+    }
+
+
+
+    //Ham lay duuu lieu bog
+    function loadBlogDataToDiv() {
+        $.ajax({
+            url: gBASE_URL_BLOG,
+            type: "GET",
+            success: getApiBlogSuccess,
+            error: getApiBlogFailed,
+        });
+    }
+
+    function getApiBlogSuccess(paramBlog) {
+        console.log(paramBlog)
+        showBlogToDiv(paramBlog);
+    }
+    function getApiBlogFailed(paramError) {
+        console.log(paramError);
+    }
+
+
+    //Ham show data vao vùng div
+    function showDataToDiv(paramPizza) {
+        // Hiển thị danh sách Pizza vào vùng Kitchen
+        var vPizzaDiv = $("#one-four-item");
+
+        var html = "";
+        for (var i = 0; i < paramPizza.length; i++) {
+            var vPizza = paramPizza[i];
+            html += `<div class='list-one-item'>
+                        <img src="${vPizza.imageUrl}">
+                        <div class='upper-description'>   
+                            <div class='upper'>
+                                <span> ${vPizza.name} </span>
+                                <span> $${vPizza.price}</span>
+                            </div>
+                        </div>
+                        <div class='under-description'>
+                            <div class='under-rate-time-add'>
+                                <svg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'>
+                                <path d='M14.1121 6.72554L10.5148 6.17806L8.90666 2.7641C8.86274 2.67063 8.79048 2.59496 8.70122 2.54897C8.47736 2.43324 8.20532 2.52968 8.09339 2.7641L6.48528 6.17806L2.88791 6.72554C2.78873 6.74038 2.69805 6.78934 2.62863 6.86352C2.5447 6.95386 2.49845 7.0754 2.50004 7.20142C2.50163 7.32745 2.55094 7.44766 2.63713 7.53563L5.23987 10.1929L4.62496 13.9452C4.61054 14.0324 4.61976 14.1222 4.65159 14.2043C4.68341 14.2864 4.73655 14.3575 4.805 14.4095C4.87344 14.4616 4.95444 14.4925 5.03882 14.4988C5.1232 14.5051 5.20757 14.4865 5.28238 14.4452L8.50003 12.6736L11.7177 14.4452C11.8055 14.4941 11.9075 14.5104 12.0053 14.4926C12.2518 14.4481 12.4176 14.2033 12.3751 13.9452L11.7602 10.1929L14.3629 7.53563C14.4338 7.46293 14.4805 7.36798 14.4947 7.26412C14.533 7.00447 14.3601 6.76412 14.1121 6.72554Z' fill='#1B1C21' />
+                                </svg>
+                                <span class='small-number'>${vPizza.rating}</span>
+                                <span class='small-number'>${vPizza.time}</span>
+                            </div>
+                            <button class='btn btn-add-pizza' onclick="onBtnAddToCart(${vPizza.id})">
+                                <svg xmlns='http://www.w3.org/2000/svg' width='23' height='21' viewBox='0 0 23 21' fill='none'>
+                                    <rect x='0.5' y='0.5' width='22' height='20' rx='5' fill='#F3BA00' />
+                                    <path d='M11.5991 10.6961V16.1863M6.04956 10.6961H11.5991H6.04956ZM17.1487 10.6961H11.5991H17.1487ZM11.5991 10.6961V5.20587V10.6961Z' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round' />
+                                    /svg>
+                            </button>
+                            </div>
+                        </div>
+                    </div>`;
+        }
+
+        vPizzaDiv.html(html);
+    }
+
+
+    //Ham show Blog dât to div
+    function showBlogToDiv(paramBlog) {
+        var vBlogDiv12 = $("#blog-content-id-one-two");
+        var vBlogDivCenter = $("#blog-content-id-center");
+        var vBlogDiv45 = $("#blog-content-id-four-five");
+
+        var vHtmlCenter = ""
+        var vHtml12 = "";
+        var vHtml34 = "";
+        for (let bI = 0; bI < (paramBlog.length / 2) - 1; bI++) {
+            var vBlog = paramBlog[bI];
+
+            vHtml12 += `<div class="list-one-blog-item media mr-3 mb-5" id="${vBlog.id}">
+                        <div>
+                            <img src="${vBlog.imageUrl}">
+                            <div>
+                                <h3>${vBlog.title}</h3>
+                                <p>${vBlog.description}</p>
+                            </div>
+                        </div>
+                </div>`
+        }
+
+        var vBlogCenter = Math.ceil(paramBlog.length / 2 - 1);
+        var vBlogCenterItem = paramBlog[vBlogCenter]
+        vHtmlCenter += `<div class="list-one-blog-item media mr-3 mb-5" id="${vBlogCenterItem.id}">
+                            <div>
+                                <img src="${vBlogCenterItem.imageUrl}">
+                                <div>
+                                    <h3>${vBlogCenterItem.title}</h3>
+                                    <p>${vBlogCenterItem.description}</p>
+                                </div>
+                            </div>
+                        </div>`;
+        // return true;
+        for (let bI = Math.ceil(paramBlog.length / 2); bI < paramBlog.length; bI++) {
+            console.log(paramBlog.length)
+            var vBlogfourFive = paramBlog[bI];
+            console.log(vBlogfourFive);
+
+            vHtml34 += `<div class="list-one-blog-item media mr-3 mb-5" id="${vBlogfourFive.id}">
+                        <div>
+                            <img src="${vBlogfourFive.imageUrl}">
+                            <div>
+                                <h3>${vBlogfourFive.title}</h3>
+                                <p>${vBlogfourFive.description}</p>
+                            </div>
+                        </div>
+                </div>`
+        }
+
+
+        vBlogDiv12.html(vHtml12);
+        vBlogDivCenter.html(vHtmlCenter);
+        vBlogDiv45.html(vHtml34);
+    }
+
+    function getPizzaIdFromButton(paramBtn) {
+        console.log(paramBtn);
+        return paramBtn;
+    }
+
+    function getPizzaById(paramPizzaId) {
+        $.ajax({
+            url: vBASE_URL_FOODS + paramPizzaId,
+            type: "GET",
+            success: function (paramResponse) {
+                var vPizzaObject = paramResponse;
+
+                // Lấy danh sách sản phẩm từ Local Storage (nếu có)
+                var cartItems = localStorage.getItem("cartItems");
+                var cart = [];
+
+                if (cartItems) {
+                    // Nếu đã có sản phẩm trong giỏ hàng, chuyển đổi chuỗi JSON thành mảng đối tượng
+                    cart = JSON.parse(cartItems);
+                }
+
+                // Thêm sản phẩm vào danh sách giỏ hàng
+                cart.push(vPizzaObject);
+
+                // Lưu danh sách sản phẩm vào Local Storage
+                localStorage.setItem("cartItems", JSON.stringify(cart));
+
+                // Hiển thị thông báo thành công (tuỳ chỉnh theo yêu cầu của bạn)
+                alert("Sản phẩm đã được thêm vào giỏ hàng!");
+            },
+            error: function (paramError) {
+                console.log(paramError.status)
+            }
+        })
+    }
+
+
+    function checkCartAndChangeColor() {
+        var cartItems = localStorage.getItem("cartItems");
+        var cart = [];
+
+        if (cartItems) {
+            cart = JSON.parse(cartItems);
+        }
+
+        var icon = $(".btn-gioHang");
+
+        if (cart.length > 0) {
+            icon.css("background-color", " #FFA500");
+        } else {
+            icon.css("border", "2px solid white");
+        }
+        icon.on("click", function () {
+            window.location.href = "giohang.html";
+        });
+    }
+</script>
+
+</html>

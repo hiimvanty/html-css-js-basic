@@ -1,0 +1,25 @@
+tr {
+    margin-bottom: 20px;
+    /* justify-content: center;
+} */
+}
+
+.quantity-colums {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.remove-item {
+    text-decoration: underline;
+}
+
+.remove-item:hover {
+
+    cursor: pointer;
+
+}
+.item-footer{
+    display: flex;
+}

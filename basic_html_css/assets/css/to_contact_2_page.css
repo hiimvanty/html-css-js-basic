@@ -1,0 +1,133 @@
+.left-header {
+    color: #000;
+    font-family: Happy Monkey;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.left-p {
+    height: 59px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Happy Monkey;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 112.5% */
+}
+
+.left-p span {
+    color: #5FC3CA;
+    font-family: Happy Monkey;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration-line: underline;
+}
+
+#label-name {
+    color: #5FC3CA;
+    text-align: center;
+    font-family: Happy Monkey;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+::placeholder {
+    color: rgba(192, 192, 192, 1);
+    text-align: left;
+    font-family: Happy Monkey;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.name-input {
+    height: 48px;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 2px solid #5FC3CA;
+    background: #F4F4F4;
+}
+
+.email-input {
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 2px solid #C0C0C0;
+    background: #F4F4F4;
+    margin: 40px 0;
+    height: 48px;
+}
+
+.message-textarea {
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 2px solid #C0C0C0;
+    background: #F4F4F4;
+}
+
+.right-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #5FC3CA;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.right-img {
+    background-image: url('../img/to_contact_page/tech-support-call-on-the-computer.png');
+    width: 70%;
+    height: 50%;
+    flex-shrink: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container-bg-color {
+    padding: 240px 100px;
+    background: conic-gradient(from -2deg at 52.89% 52.66%, #A5E3E7 85.24869740009308deg, #F0DAC2 153.6356770992279deg, #F6E3CD 280.4881453514099deg, #9FE6EA 325.8042812347412deg);
+}
+
+.contact-left {
+    background-color: white;
+    padding: 45px 0px 45px 35px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.right-cover {
+    padding: 0;
+
+}
+
+.nice {
+    display: flex;
+    width: 120px;
+    height: 50px;
+    padding: 11px 81px 13px 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #5FC3CA;
+}
+
+.btn-submit {
+    color: #FFF;
+    text-align: center;
+    font-family: Happy Monkey;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

@@ -1,0 +1,48 @@
+.icon-button {
+    background-color: #ffffff;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-button i {
+    font-size: 16px;
+    color: #000000;
+}
+
+.bg-option {
+    background: linear-gradient(to left, rgb(253, 0, 0), rgb(180, 255, 216));
+    background-size: 200% auto;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+td {
+    font-size: 1.4 rem;
+    font-family: sans-serif;
+    /* padding: 0; */
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.btn-add {
+    background: linear-gradient(to left, rgb(138, 101, 224), rgb(231, 13, 13));
+    animation: gradientAnimation 5s linear infinite;
+}
+
+button {
+    border-radius: 4px;
+}
+
+td {
+    text-align: center;
+    color: #404146;
+    font-family: Cabin;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

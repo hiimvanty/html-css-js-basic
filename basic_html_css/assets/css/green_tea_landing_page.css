@@ -1,0 +1,576 @@
+.app {
+    width: 1440px;
+    /* height: 3400px; */
+    background: #FFF;
+    margin: auto;
+
+}
+
+.app__header {
+    width: 1440px;
+    height: 863px;
+    flex-shrink: 0;
+    display: flex;
+    justify-items: center;
+    margin-bottom: 37px ;
+
+}
+
+.app__header-container {
+    background-image: url('../img/green_tea_landing_page/rectangle-3.png');
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-logo {
+    width: 86px;
+    height: 72px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+#header-logo {
+    position: absolute;
+    background-image: url('../img/green_tea_landing_page/rectangle-2.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    /* top:-38px;
+    left: -43px; */
+}
+
+/* #header-brand {} */
+
+.header-brand span {
+    color: #000;
+    font-family: Jost;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.header-nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+
+.header-nav a {
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.header-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+
+/* BODY */
+
+.app__body div{
+    margin-bottom: 37px;
+}
+
+.app__body-aboutUs {
+    width: 1440px;
+    height: 13.2352941176%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+
+
+
+.aboutUs-img {
+    width: 100%;
+    height: 450px;
+    flex-shrink: 1;
+}
+
+#aboutUs-img {
+    background-image: url('../img/green_tea_landing_page/rectangle-4.png');
+    background-color: lightgray;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUs-content {
+    width: 100%;
+    height: 450px;
+    background: #9CAB70;
+    flex-shrink: 1;
+}
+
+.aboutUs-content__container {
+    margin: 41px 58px 139px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUs-content__container span {
+    color: #FFF;
+    font-family: Kaisei Decol;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 27px;
+}
+
+.aboutUs-content__container p {
+    width: 662px;
+    height: 173px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Kaisei Decol;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+/* PRODUCT */
+.app__body-product {
+    /* position: absolute; */
+    width: 1440px;
+    /* height: 738px; */
+    flex-shrink: 1;
+    background: #EEE;
+    /* box-sizing: border-box; */
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 58px; */
+}
+
+.product-container__title {
+    margin-top: 58px;
+}
+
+.product-container__title span {
+    color: #000;
+    font-family: Kaisei Decol;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.product-container__contentin4 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 94px 86px 131px;
+    justify-content: space-around;
+}
+
+.product-container__content {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 27px;
+
+}
+
+.content-box__img {
+    width: 195px;
+    height: 190px;
+    flex-shrink: 0;
+}
+
+#content-box__img1 {
+    border-radius: 195px;
+    background-image: url('../img/green_tea_landing_page/ellipse-1.svg');
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+/* .content-box__name {} */
+
+.content-box__name h1 {
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 13px 0 0 0;
+}
+
+.content-box__description {
+    width: 274px;
+    height: 143px;
+    flex-shrink: 0;
+}
+
+.content-box__description p {
+    color: #000;
+    text-align: center;
+    font-family: Kaisei Decol;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+#content-box__img2 {
+    border-radius: 195px;
+    background-image: url('../img/green_tea_landing_page/ellipse-2.svg');
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#content-box__img3 {
+    border-radius: 195px;
+    background-image: url('../img/green_tea_landing_page/ellipse-3.svg');
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#content-box__img4 {
+    border-radius: 195px;
+    background-image: url('../img/green_tea_landing_page/ellipse-4.svg');
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+/* DISCOUNT */
+.app__body-discount {
+    width: 1440px;
+    /* height: 354px; */
+    background-color: #EEE;
+    flex-shrink: 1;
+    /* position: relative; */
+}
+
+.discount-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount-contents {
+    width: 927px;
+    height: 354px;
+    flex-shrink: 0;
+    background: #9CAB70;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.discount-contents h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Italiana;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+
+}
+
+#discount__p {
+    width: 654px;
+    height: 103px;
+    flex-shrink: 0;
+}
+
+#discount__p p {
+    color: #FFF;
+    text-align: center;
+    font-family: Jost;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+#discount__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 227px;
+    height: 57px;
+    /* flex-shrink: 0; */
+    border-radius: 20px;
+    border: 2px solid #68763F;
+    background: rgba(255, 255, 255, 0.80);
+    text-align: center;
+}
+
+#discount__btn a {
+    width: 205px;
+    height: 46px;
+    flex-shrink: 0;
+    color: #383F26;
+    text-align: center;
+    font-family: Jost;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.discount-img {
+    width: 488px;
+    height: 355px;
+    flex-shrink: 0;
+}
+
+#discount-img {
+    background-image: url('../img/green_tea_landing_page/rectangle-8.png');
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTACT */
+.app__body-contact {
+    width: 1435px;
+    height: 598px;
+    flex-shrink: 0;
+}
+
+.contact-container {
+    background: url('../img/green_tea_landing_page/rectangle-10.png');
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-login {
+    width: 607px;
+    height: 603px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FAFAFA;
+}
+
+.contact-login h3 {
+    color: #000;
+    text-align: center;
+    font-family: Jost;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 36px 0;
+}
+
+.contact-login input {
+    width: 515px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 4px solid #9CAB70;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 17px 0;
+    box-sizing: border-box;
+}
+
+#message {
+    height: 135px;
+    border-radius: 20px;
+}
+
+.contact-login button {
+    width: 153px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 4px solid #9CAB70;
+    background: #68763F;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    left: 185px;
+    margin-bottom: 60px;
+}
+
+#contact-btn a {
+
+    color: #FFF;
+    text-align: center;
+    font-family: Jost;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+}
+
+/*FOOTER*/
+.app__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 86px;
+    height: 72px;
+    flex-shrink: 0;
+    background-image: url('../img/green_tea_landing_page/rectangle-2.png');
+    /* background-color:  lightgray; */
+    background-repeat: no-repeat;
+    margin-top: 28px;
+}
+
+.footer-brand {
+    color: #000;
+    font-family: Jost;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.footer-icon {
+    margin: 16px 0 20px;
+}
+
+.footer-icon svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin: 0 12px;
+}
+
+.footer-nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav a {
+    color: #9CAB70;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+/* --------------------------------------------------- */
+@media screen and (min-width: 992px) {
+    .header-nav {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .app__body-aboutUs {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .aboutUs-img {
+        width: 513px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+    }
+
+    .aboutUs-content {
+        width: 927px;
+        /* flex-shrink: 0; */
+    }
+
+    .product-container__contentin4 {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .app__body-product {
+        background-color: rgb(236, 223, 223);
+    }
+
+    .discount-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}

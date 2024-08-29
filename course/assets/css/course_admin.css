@@ -1,0 +1,37 @@
+.icon-button {
+    background-color: #ffffff;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-button i {
+    font-size: 16px;
+    color: #000000;
+}
+
+.bg-option {
+    background: linear-gradient(to left, lavender, rebeccapurple);
+    background-size: 200% auto;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+td {
+    font-size: 1.4 rem;
+    font-family: sans-serif;
+    /* padding: 0; */
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bg-add {
+    background: linear-gradient(to left, rgb(59, 13, 106), lavender);
+    animation: gradientAnimation 5s linear infinite;
+}
+button {
+    border-radius: 4px;
+}

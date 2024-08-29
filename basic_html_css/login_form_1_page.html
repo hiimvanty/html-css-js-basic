@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/login_form_1_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300&family=Italiana&family=Jost:wght@300&family=Kaisei+Decol&family=Montserrat:ital,wght@0,300;1,400&family=Open+Sans:wght@300;400&family=Slabo+27px&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container jumbotron">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="h2-title">create a free account</h2>
+                <form action="" id="form-signup">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" name="" id="input-name" placeholder="Your name" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" name="" id="input-email" placeholder="Your email address"
+                            class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" name="" id="input-password" placeholder="******" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Confirm password</label>
+                        <input type="password" name="" id="input-confirm-password" placeholder="******"
+                            class="form-control">
+                    </div>
+                    <button class="form-control btn-signup" type="submit">Sign Up</button>
+                    <div class="span-service-policy text-center">
+                        <span>By signing up you agree to our
+                            <span id="span-green">Terms of Service</span>
+                            and
+                            <span id="span-green">
+                                Privacy Policy
+                            </span>
+                        </span>
+                    </div>
+                    <div class="have-account text-center">
+                        <span>Already have an account?</span>
+                        <a href="">Login</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <div class="patterns-geometricos">
+                    <div class="undraw-invest">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    'use strict';
+    /*** REGION 1 - Global variables - Vùng khai báo biến, hằng số, tham số TOÀN CỤC */
+    const gREQUEST_STATUS_OK = 200;
+    const gREQUEST_STATUS_CREATED = 201;
+    const gREQUEST_READY_STATUS_FINISH_AND_OK = 4;
+    const gBASE_URL = "https://62458c222cfed18817229118.mockapi.io/users";
+    const gBASE_URL_CONTACTS = "https://62458c222cfed18817229118.mockapi.io/contacts";
+
+    var gSIGN_UP_ELEMENT = document.getElementById("form-signup");
+
+    /*** REGION 2 - Vùng gán / thực thi sự kiện cho các elements */
+    gSIGN_UP_ELEMENT.addEventListener("submit", function (paramEvent) {
+        //Loai bo mac dinh cua submit form
+        paramEvent.preventDefault();
+        callAPIToSignUp();
+    });
+
+    /*** REGION 3 - Event handlers - Vùng khai báo các hàm xử lý sự kiện */
+    function callAPIToSignUp() {
+        var vUserObject = {
+            name: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+        }
+        //Thu thap du lieu
+        collectData(vUserObject);
+        //Validate
+        var vValid = isValidateData(vUserObject);
+        if (vValid) {
+            //Chuan bi input
+            var vQueryParams = new URLSearchParams({
+                name: vUserObject.name,
+                email: vUserObject.email,
+                password: vUserObject.password,
+            });
+            console.log(vQueryParams);
+            //create request
+            var vXmlHttpSignUpRequest = new XMLHttpRequest();
+            callAPIToGetDataSignUp(vQueryParams, vXmlHttpSignUpRequest);
+
+            vXmlHttpSignUpRequest.onreadystatechange = function () {
+                if (vXmlHttpSignUpRequest.readyState == gREQUEST_READY_STATUS_FINISH_AND_OK && vXmlHttpSignUpRequest.status == gREQUEST_STATUS_CREATED) {
+                    var vResponseLoginInfo = JSON.parse(vXmlHttpSignUpRequest.responseText);
+                    console.log(vResponseLoginInfo);
+                    alert("dang ky thanh cong");
+                }
+            };
+        } else {
+            alert("Dang ky that bai");
+        }
+    }
+    /*** REGION 4 - Common funtions - Vùng khai báo hàm dùng chung trong toàn bộ chương trình*/
+    function collectData(paramUserObject) {
+        var vNameInputElement = document.getElementById("input-name");
+        paramUserObject.name = vNameInputElement.value.trim();
+
+        var vEmailInputElement = document.getElementById("input-email");
+        paramUserObject.email = vEmailInputElement.value.trim();
+
+        var vPasswordInputElement = document.getElementById("input-password");
+        paramUserObject.password = vPasswordInputElement.value.trim();
+
+        var vConfirmPasswordInputElement = document.getElementById("input-confirm-password");
+        paramUserObject.confirmPassword = vConfirmPasswordInputElement.value.trim();
+    }
+
+    function isValidateData(paramUserObject) {
+        if (!validateEmail(paramUserObject.email)) {
+            alert("Email ban nhap khong dung dinh dang");
+            return false;
+        }
+        if (!validatePassword(paramUserObject.password)) {
+            alert("Mat khau ban nhap khong dung dinh dang, mat khau phai nhieu hon 7 ky tu vaf khong duoc de trong");
+            return false;
+        }
+        if (!validateConfirmPassword(paramUserObject.confirmPassword, paramUserObject.password)) {
+            alert("Vui long nhap dung de xac nhan mat khau");
+            return false;
+        }
+        if (paramUserObject.name == "") {
+            alert("Vui long nhap ten cua ban");
+            return false;
+        }
+        return true;
+    }
+
+
+    function callAPIToGetDataSignUp(paramQueryObject, paramXMLHttpObj) {
+        console.log(paramQueryObject);
+        paramXMLHttpObj.open("POST", gBASE_URL +"?"+ paramQueryObject.toString(), true);
+        paramXMLHttpObj.send(paramQueryObject);
+    }
+
+
+    function validateEmail(paramEmail) {
+        var vValidRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (paramEmail.match(vValidRegex)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function validatePassword(paramPassword) {
+        if (paramPassword == "") {
+            return false;
+        }
+        if (paramPassword.length < 8) {
+            return false;
+        }
+        return true;
+    }
+
+    function validateConfirmPassword(paramConfirmPassword, paramPassword) {
+        if (paramConfirmPassword == "") {
+            return false;
+        }
+        if (paramConfirmPassword.length < 8) {
+            return false;
+        }
+        if (paramConfirmPassword != paramPassword) {
+            return false;
+            alert("Mat khau confirm sai");
+        }
+        return true;
+    }
+</script>
+
+</html>
